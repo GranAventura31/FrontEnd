@@ -7,7 +7,7 @@ export const SobreNosotrosUi = () => {
       {/* <p>adasasasasa</p> */}
       <div className='contenidoNosotros'>
         <figure className='imagen'>
-          <img src="https://res.cloudinary.com/dlohqvzri/image/upload/v1683235855/niko/perfil_qlghs5.png" alt="" className='img'/>
+          <img src="https://res.cloudinary.com/dlohqvzri/image/upload/v1684447278/Imagen1_aav3dx.jpg" alt="" className='img'/>
          </figure>
         <div className='nosotros'>
           <h1 className='tituloNosotros'>¿Quiénes Somos?</h1>
@@ -16,7 +16,7 @@ export const SobreNosotrosUi = () => {
       </div>
       <div className='contenidoNosotros2'>
         <figure className='imagen'>
-          <img src="https://res.cloudinary.com/dlohqvzri/image/upload/v1683235855/niko/perfil_qlghs5.png" alt="" className='img'/>
+          <img src="https://res.cloudinary.com/dlohqvzri/image/upload/v1684447771/imagen3_spwtu2.jpg" alt="" className='img'/>
          </figure>
         <div className='nosotros2'>
           <h1 className='tituloNosotros'>Misión</h1>
@@ -25,7 +25,7 @@ export const SobreNosotrosUi = () => {
       </div>
       <div className='contenidoNosotros'>
         <figure className='imagen'>
-          <img src="https://res.cloudinary.com/dlohqvzri/image/upload/v1683235855/niko/perfil_qlghs5.png" alt="" className='img'/>
+          <img src="https://res.cloudinary.com/dlohqvzri/image/upload/v1685651882/excursion_dmcclq.jpg" alt="" className='img'/>
          </figure>
         <div className='nosotros'>
           <h1 className='tituloNosotros'>Visión</h1>

@@ -1,15 +1,15 @@
 import React from 'react'
-import { Testimonio } from '../Testimonio/Testimonio'
+import { Testimonio } from '../../../../Mobile/Components/ui/Testimonio/Testimonio'
 
 
 export const Testimonioss = () => {
   return (
-    <div className='DivTestimonioss'>
+    <div className='DivTestimoniossM'>
         <div>
           <h2 className='tituloTestimonios'>Testimonios</h2>
           <hr className='hrTestimonios'/>  
         </div>
-        <div className='DivCardTestimonios'>
+        <div className='DivCardTestimoniosM'>
         <Testimonio stylep2='Cardparrafotestimonios' stylep='Cardparrafotestimonios2'  content='Antony Rosales' pcontent='@antonyrosales29' pcontent2='La mejor excursión🎉' styleh1='CardtituloTestimonio' style='imagenTestimonio' img='https://res.cloudinary.com/dlohqvzri/image/upload/v1684446043/comuna13_yijssp.jpg' referencia="https://instagram.com/antonyrosales29"/>
         <Testimonio stylep2='Cardparrafotestimonios' stylep='Cardparrafotestimonios2'  content='Sebastian Ramirez' pcontent='@jsebastian_____17' pcontent2='Quiero repetir ♥️' styleh1='CardtituloTestimonio' style='imagenTestimonio' img='https://res.cloudinary.com/dlohqvzri/image/upload/v1685478873/ramirez_dduys8.jpg' referencia='https://www.instagram.com/jsebastian_____17/'/>
         <Testimonio stylep2='Cardparrafotestimonios' stylep='Cardparrafotestimonios2'  content='Sebastian zapata' pcontent='@sebastian_zapata09' pcontent2='Que ricoo santa marta🏖️' styleh1='CardtituloTestimonio' style='imagenTestimonio' img='https://res.cloudinary.com/dlohqvzri/image/upload/v1685479444/zapata_jkejb3.jpg' referencia="https://www.instagram.com/sebastian_zapata09/"/>
