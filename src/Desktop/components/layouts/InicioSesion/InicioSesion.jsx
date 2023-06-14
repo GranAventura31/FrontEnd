@@ -71,6 +71,7 @@ const register = (e) => {
         setRegistroStatus(response.data.message);
       }else{
         alertaRegistro();
+        putPanel();
       }
     })
   }
@@ -166,9 +167,9 @@ const login = (e) => {
                 <input type="number" name='telefono' onChange={(e) => {setTelefono(e.target.value)}} required/>
                 <label>Telefono</label>
               </div>
-              <div className="remember-forgot">
+              {/* <div className="remember-forgot">
                   <label><input type="checkbox" />Términos y condiciones</label>
-              </div>  
+              </div>   */}
               <button type='submit' className="btn" onClick={register}> Registrar </button>
               
             </form>

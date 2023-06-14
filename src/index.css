@@ -17,7 +17,11 @@ header{
 }
 
 .navbar{
-  padding: 2rem;
+  padding: 2rem 0 0 0;
+}
+
+.navbarLogueado{
+  padding: 0 0 2rem 0;
 }
 
 .barraT{
@@ -986,7 +990,7 @@ input[type=number]::-webkit-outer-spin-button {
 .divRecuperacion{
   display: flex;
   justify-content: center;
-  margin-top: 13rem; 
+  margin-top: 5rem; 
 }
 
 .recuperacionContrasena{
@@ -2007,28 +2011,31 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .modalPerfil{
-  width: 15rem;
-  height: 15rem;
+  width: 17rem;
+  height: 5rem;
   font-size: 1rem;
-  /* background: #000; */
   background: rgb(228, 228, 228);
-  border-radius: 10px 0 0 10px;
+  border-radius:  10px;
   text-align: center;
-  margin-left: 69.2rem;
+  margin-left: 60rem;
+  margin-top: 0.5rem;
 }
 
 .perfil{
+  display: flex;
+  flex-direction: row;
   font-size: 2rem;
-  padding: 2rem 0 0 0;
+  padding: 1rem 1rem 0 1rem;
 }
 
 .perfilItem1{
   cursor: pointer;
-  /* color: #000; */
   color: #fff;
-  background: #149463;
-  border-bottom: solid 2px #000;
-  border-radius: 10px;
+  /* background: #149463; */
+  /* border-bottom: solid 2px #000; */
+  /* border-radius: 10px; */
+  height: 3rem;
+  width: 4rem;
 }
 
 .perfilItem1:hover{
@@ -2037,20 +2044,27 @@ input[type=number]::-webkit-outer-spin-button {
 
 .perfilItem{
   cursor: pointer;
-  /* color: #000; */
-  color: #fff;
-  border-bottom: solid 2px #000;
-  margin-top: 1rem;
-  border-radius:10px;
-  background: #149463;
+  /* color: #fff; */
+  /* border-bottom: solid 2px #000; */
+  margin-left: 1rem;
+  /* border-radius:10px; */
+  /* background: #149463; */
+  width: 13rem;
+  height: 3rem;
+}
+
+.perfilItem:focus {
+  border-bottom: 2px solid;
 }
 
 .perfilItem:hover{
-  background: #1dad78;
+  border-bottom: 2px solid;
+  color: #1dad78;
 }
 
 .closeModalPerfil{
   cursor: pointer;
   font-size: 2.5rem;
-  margin-left: 10rem;
+  margin-left: 6rem;
+  position: absolute;
 }

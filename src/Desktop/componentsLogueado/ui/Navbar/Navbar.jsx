@@ -29,7 +29,7 @@ export const Navbar = () => {
     navigate('/')
   }
   return (
-    <nav className='navbar'>
+    <nav className='navbarLogueado'>
         <div>
         <Link className='link' to='/HomeLogueado'>Página de inicio</Link>
         <Link className='link' to='/contenidoLogueado'>Contenido</Link>
@@ -41,7 +41,7 @@ export const Navbar = () => {
             className="modalPerfil">
               <IoClose onClick={closeModal} className='closeModalPerfil'/> 
               <div className="perfil">
-                <div className="perfilItem1">Perfil</div>
+                {/* <div className="perfilItem1">Perfil</div> */}
                 <div className="perfilItem" onClick={alertaSesion}>Cerrar Sesión</div>
               </div>
             </Modal>
