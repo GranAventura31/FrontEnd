@@ -16,12 +16,22 @@ export const Documentos = () => {
   return (
     <div className='documentos'>
         <div className='descargas'>
-            <h2 className='titulospermiso'>Permisos de menores de edad</h2>
+            <h2 className='titulopermiso'>Acta de Compromiso</h2>
             <hr className='barrita'/>
             <button className='descarga' onClick={openAlert}>Descargar</button>
         </div>
         <div className='descargas'>
-            <h2 className='titulopermiso'>Permisos de registraduría</h2>
+            <h2 className='titulopermiso'>Carta Notaria</h2>
+            <hr className='barrita'/>
+            <button className='descarga' onClick={openAlert}>Descargar</button>
+        </div>
+        <div className='descargas'>
+            <h2 className='titulopermiso'>Paz y Salvo</h2>
+            <hr className='barrita'/>
+            <button className='descarga' onClick={openAlert}>Descargar</button>
+        </div>
+        <div className='descargas'>
+            <h2 className='titulospermiso'>Contrato</h2>
             <hr className='barrita'/>
             <button className='descarga' onClick={openAlert}>Descargar</button>
         </div>

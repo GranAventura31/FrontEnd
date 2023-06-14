@@ -1410,9 +1410,9 @@ input[type=number]::-webkit-outer-spin-button {
 .reservaModal{
   background: #ffffff; 
   width: 80%;
-  height: 55rem;
+  height: 38rem;
   display: flex;
-  margin: 3rem 0 0 15rem;
+  margin: 1rem 0 0 10rem;
   border: solid 2px;
   border-radius: 1rem;
   margin-bottom: 10rem;
@@ -1424,11 +1424,11 @@ input[type=number]::-webkit-outer-spin-button {
 
 .imagenReservaModal1{
   width: 70%;
-  height: 35%;
+  height: 20%;
   border-radius: 2rem 2rem 0 0;
   -webkit-transition: 1s linear;
   transition: 1s linear;
-  margin-left: 14rem;
+  margin-left: 11rem;
 }
 
 .h2reservaModal{
@@ -1449,28 +1449,27 @@ input[type=number]::-webkit-outer-spin-button {
 
 .imagenBoletas{
   width: 50%;
-  height: 100%;
-  margin-left: 7rem;
+  height: 90%;
+  margin-left: 5rem;
   border-radius: 10px;
 }
 .labelBoletas{
-  margin-top: 0.5rem;
   padding: 0 1rem 0 1rem;
   text-align: justify;
 }
 .labelBoletas2{
-  margin-right: 13rem;
+  width: 100%;
+  margin-left: 3rem;
 }
 .labelTransaccion{
-  margin-right: 5rem;
-  margin-top: 1rem;
+  text-align: center;
 }
 .labelTransaccion2{
-  margin-right: 15rem;
+  text-align: center;
 }
 .imagentransaccion{
   width: 45%;
-  height: 100%;
+  height: 90%;
 }
 
 .formGroupBoletas{
@@ -1493,7 +1492,7 @@ input[type=number]::-webkit-outer-spin-button {
   align-items: center;
   border: solid 2px #000;
   border-radius: 10px;
-  margin-left: 5rem;
+  margin-left: 2rem;
   margin-top: 1rem;
 }
 
@@ -1522,7 +1521,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 1rem;
   color: #ffffff;
   font-weight: bold;
-  margin: 2rem 0 0 36rem;
+  margin: 0rem 0 0 22rem;
 }
 .btnReservaTotal:hover{
   background: #199a68;
@@ -1534,6 +1533,7 @@ input[type=number]::-webkit-outer-spin-button {
   margin-left: 1rem;
   margin-top: 2rem;
   color: #000000;
+  cursor: pointer;
 }
 
 

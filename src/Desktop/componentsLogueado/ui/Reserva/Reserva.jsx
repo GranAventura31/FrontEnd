@@ -154,7 +154,8 @@ export const Reserva = () => {
                       <img src="https://res.cloudinary.com/dlohqvzri/image/upload/v1685739504/nequi_zrtfvk.webp" className='imagentransaccion' alt="" />
                   </div>
                   <Label for='boletas1' className='labelTransaccion'>Se pagara toda la excursion por medio de transacciones</Label>
-                  <Label for='boletas1' className='labelTransaccion2'>Las transaccion la podran hacer a </Label>
+                  <Label for='boletas1' className='labelTransaccion2'>Las transaccion la podran hacer a:</Label>
+                  <Label for='boletas1' className='labelTransaccion2'>NEQUI - 3162686982 Bancolombia - 3162686982</Label>
                 <FormGroup>
                   <Input type="radio" className='transaccion2' value='Transaccion' onChange={changeRadioTransaction} checked={transaction == 'Transaccion' ? true: false}/>
                   <Label for='transaccion2' className='radio2'>Transacción</Label>
