@@ -1,6 +1,6 @@
 import React from 'react'
-import { CardsLugar } from '../CardsLugar/CardsLugar'
-import { UiCardLugar } from '../UICardLugar/UiCardLugar'
+import { CardsLugar } from '../../../../Desktop/components/ui/CardsLugar/CardsLugar'
+import { UiCardLugar } from '../../../../Desktop/components/ui/UICardLugar/UiCardLugar'
 
 export const CardsLugares = () => {
   return (

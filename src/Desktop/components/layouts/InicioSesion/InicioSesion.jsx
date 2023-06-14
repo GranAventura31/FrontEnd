@@ -7,6 +7,7 @@ import Axios from 'axios';
 import swal from 'sweetalert2';
 import { Link }  from 'react-router-dom'
 import { Routes, Route} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 
 
 export const InicioSesion = ({user, setUser}) => {
@@ -74,7 +75,7 @@ const register = (e) => {
     })
   }
 }
- 
+ const navigate = useNavigate();
 const login = (e) => {
   const alertaLogin = () =>{
     swal.fire({
@@ -96,6 +97,7 @@ const login = (e) => {
         setLoginStatus(response.data.message);
       }else{
         alertaLogin();
+        navigate('/HomeLogueado');
       }
     })
   }
@@ -104,9 +106,6 @@ const login = (e) => {
     <Fragment>
       <div className='contenedor'>
       <div className={`wrapper ${clas ? "active" : ""}`}>
-        {/* <span className="icon-close">
-          <AiOutlineCloseCircle/>
-        </span> */}
 
         <div className="form-box login">
             <h2>Inicio Sesion</h2>

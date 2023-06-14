@@ -5,9 +5,7 @@ sans-serif;
 
 /* Header */
 .headerMobile{
-  margin-top: -2rem;
-  background: rgb(255, 255, 
-255);
+  background: rgb(255, 255, 255);
 }
 
 .h1Mobile{
@@ -29,8 +27,7 @@ sans-serif;
 }
 
 /* MENU */
-.containerMenuMobile {
-  margin-top: 2.8rem;
+.containerMenuMobile{
   padding: 10px;
 }
 
@@ -94,15 +91,15 @@ sans-serif;
 #000000;
 }
 
+
 /* CARDS LUGARES */
 .containerCardsMobile{
   border-radius: 1rem;
   width: 100%;
   height: 110rem;
-  background-color: rgb(228, 
-228, 228);
+  background-color: rgb(228, 228, 228);
 }
-.titulolugaresCard{
+.titulolugaresMobile{
   font-size: 1.5rem;
   display: flex;
   justify-content: center;
@@ -112,7 +109,6 @@ sans-serif;
   width: 10rem;
   height: 0.2rem;
   margin-left: 7.5rem;
-  margin-top: -1rem;
   background-color: #1cd48d;
 }
 .containerCardsM{
@@ -131,46 +127,165 @@ sans-serif;
   margin-left: 1.5rem;
   display: flex;
 }
-.Cardslog{
-  display: flex;
-  justify-content: center;
-}
 
+.LinkMobile{
+  width: 20rem;
+  margin-top: 2rem;
+  height: 10rem;
+  color: #ffffff;
+  background-color: #162938;
+}
 
 /* Testimonios */
-.DivTestimoniossM{
-  width: 25rem;
-  background-color: #008000;
-}
-.DivCardTestimoniosM{
+.DivCardTestimoniosMobile{
   display: flex;
-  flex-wrap: wrap ;
-  /* width: 25rem; */
-  background-color: #008000;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 3rem;
 } 
-.CardTestimoniosM{
-  background-color: #ffffff;
+.CardTestimoniosMobile{
+  width: 11rem;
+  height: 20rem;
+}
+.hrTestimoniosMobile{
   width: 10rem;
+  height: 0.2rem;
+  margin-left: 7.5rem;
+  background-color: #1cd48d;
 }
-.CardImagenM{
-  border-radius: 2rem;
-  background-color: #000000;
-}
-.CardH1P{
-  background-color: #000000;
-}
-/* .CardImagenM{
+.imagenTestimonioMobile{
   width: 5rem;
-  height: 2rem;
-}
-.DivTestimoniossM{
-  background-color: rgb(228, 
-228, 228);
-}
-
-/* .CardInformacionTestimonio{
-  width: 15rem;
   height: 5rem;
-} */
+  border-radius: 2rem;
+}
+.CardImagenMobile{
+  border-radius: 1rem 1rem 0 0;
+  width: 11rem;
+  height: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+}
+.CardInformacionTestimonioMobile{
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1cd48d;
+  border-radius: 0 0 1rem 1rem;
+}
+.CardparrafotestimoniosMobile{
+  margin-left: 0.5rem;
+}
+
+/* Modal Reserva */
+.ReservaMobile{
+  margin-left: 3rem;
+}
+.HrReservaMobile{
+  width: 10rem;
+  height: 0.2rem;
+  margin-left: 7.5rem;
+  background-color: #1cd48d;
+}
+.form-box-ReservaMobile{
+  margin: 0;
+  width: 20rem;
+  height: 35rem;
+  margin-left: 3rem;
+  background-color:#e6e7e6;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  border-radius: 1rem;
+  border:solid #000000;
+  background: rgb(255, 255, 255);
+}
+
+.input-boxMobile{
+  position: relative;
+  border-bottom: 2px solid #162938;
+  margin: 30px 0;
+  width: 15rem;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+  margin-left: 2rem;
+}
+.input-boxMobile label{
+  position: absolute;
+  left: 5px;
+  top: 2rem;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: #162938;
+  font-weight: bold;
+  pointer-events: none;
+  transition: .7s;
+}
+
+.input-boxMobile input:focus~label,
+.input-boxMobile input:valid~label {
+  top: -5px;
+}
 
 
+.input-boxMobile input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color:#162938;
+  font-weight: bold;
+  padding: 0 35px 0 5px;
+  
+}
+
+.input-boxMobile .icon{
+  position: absolute;
+  right: 8px;
+  font-size: 1.2rem;
+  color: #162938;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.formGroupMobile{
+  width: 10rem;
+  height: 2rem;
+  margin-left: 2.5rem;
+}
+.btnReservaMobile{
+  width: 10rem;
+  height: 45px;
+  margin-left: 4rem;
+  background: #162938;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+/* Reserva Modal Interna */
+.reservaModaMobile{
+    background-color: #c41f1f; 
+    width: 20rem;
+    height: 55rem;
+    /* display: flex; */
+    /* margin: 3rem 0 0 15rem; */
+    /* border: solid 2px; */
+    /* border-radius: 1rem; */
+    /* margin-bottom: 10rem; */
+    /* box-shadow: 0 0 30px #000000;  */
+}

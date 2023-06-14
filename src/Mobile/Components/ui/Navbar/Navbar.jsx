@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link }  from 'react-router-dom'
-import { MenuHamburguesa } from '../../ui/MenuHamburguesa/MenuHamburguesa'
+import { MenuHamburguesa } from '../../../../Mobile/Components/ui/MenuHamburguesa/MenuHamburguesa'
 
 export const Navbar = () => {
   return (

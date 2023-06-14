@@ -1,5 +1,5 @@
 import React from 'react'
-import { Documentos } from '../Documentos/Documentos'
+import { Documentos } from '../../../../Desktop/components/ui/Documentos/Documentos'
 
 export const Documento = () => {
   return (

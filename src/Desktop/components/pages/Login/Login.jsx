@@ -1,6 +1,6 @@
 import React from 'react'
-import { InicioSesion} from '../../layouts/InicioSesion/InicioSesion'
-import { Header } from '../../layouts/Header/Header'
+import { InicioSesion} from '../../../../Desktop/components/layouts/InicioSesion/InicioSesion'
+import { Header } from '../../../../Desktop/components/layouts/Header/Header'
 
 export const Login = ({user, setUser}) => {
  

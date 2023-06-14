@@ -1,5 +1,5 @@
 import React from 'react'
-import { SobreNosotrosLayouts } from '../../layouts/SobreNosotrosLayouts/SobreNosotrosLayouts'
+import { SobreNosotrosLayouts } from '../../../../Desktop/components/layouts/SobreNosotrosLayouts/SobreNosotrosLayouts'
 
 
 export const SobreNosotrosPage = () => {

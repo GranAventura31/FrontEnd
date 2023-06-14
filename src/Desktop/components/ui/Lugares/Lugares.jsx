@@ -1,5 +1,5 @@
 import React from 'react'
-import {Lugar} from '../../ui/Lugar/Lugar'
+import { Lugar } from '../../../../Desktop/components/ui/Lugar/Lugar'
 
 export const Lugares = () => {
   return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Persona } from '../Persona/Persona'
+import { Persona } from '../../../../Desktop/components/ui/Persona/Persona'
 
 export const Personal = () => {
   return (

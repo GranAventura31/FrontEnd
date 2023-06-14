@@ -1,5 +1,5 @@
 import React from 'react'
-import { Testimonio } from '../Testimonio/Testimonio'
+import { Testimonio } from '../../../../Desktop/components/ui/Testimonio/Testimonio'
 
 
 export const Testimonioss = () => {

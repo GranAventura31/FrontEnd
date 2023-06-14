@@ -1,9 +1,8 @@
 import React from 'react'
-import { Main } from '../../../components/layouts/Main/Main'
-import { Footer } from '../../layouts/Footer/Footer'
-// import { Header } from '../../layouts/Header/Header'
-import { IconWhat } from '../../ui/IconWhat/IconWhat'
-import { Header } from '../../layouts/Header/Header'
+import { Main } from '../../../../Desktop/components/layouts/Main/Main'
+import { Footer } from '../../../../Desktop/components/layouts/Footer/Footer'
+import { IconWhat } from '../../../../Desktop/components/ui/IconWhat/IconWhat'
+import { Header } from '../../../../Desktop/components/layouts/Header/Header'
 
 export const Home = () => {
   return (

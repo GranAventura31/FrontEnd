@@ -1,6 +1,6 @@
 import React from 'react'
-import { Kit } from '../../../components/ui/kit/kit'
-import { TarjetasKits } from '../../ui/TarjetasKits/TarjetasKits'
+import { Kit } from '../../../../Desktop/components/ui/kit/kit'
+import { TarjetasKits } from '../../../components/ui/TarjetasKits/TarjetasKits'
 
 export const Kits = () => {
   return (

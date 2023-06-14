@@ -20,8 +20,8 @@ export const MenuHamburguesa = ()=> {
   }
 
   return(
-    <div className="containerMenu">
-      <TiThMenu onClick={openModal} className='abrirModal' />
+    <div className="containerMenuMobile">
+      <TiThMenu onClick={openModal} className='abrirModalMobile' />
       {/* <div onClick={openModal}>
         <div className="line"></div>
         <div className="line"></div>
@@ -31,13 +31,13 @@ export const MenuHamburguesa = ()=> {
             isOpen={modalIsOpen}
             onRequestClose={closeModal}
             contentLabel="Example Modal" 
-            className="modalMenu">
-              <IoClose onClick={closeModal} className='closeModalMenu'/>
+            className="modalMenuMobile">
+              <IoClose onClick={closeModal} className='closeModalMenuMobile'/>
             <h1>Menú</h1>
           <div className="menu">
-          <div className="menuItem1">Inicio</div>
-          <div className="menuItem">Acerca de</div>
-          <div className="menuItem">Contacto</div>
+          <div className="menuItemMobile1">Inicio</div>
+          <div className="menuItemMobile">Acerca de</div>
+          <div className="menuItemMobile">Contacto</div>
         </div>
             </Modal>
 

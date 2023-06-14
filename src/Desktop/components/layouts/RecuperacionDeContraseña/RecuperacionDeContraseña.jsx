@@ -1,5 +1,5 @@
 import React from 'react'
-import { RecuperacionContraseña } from '../../ui/RecuperacionContraseña/RecuperacionContraseña.jsx'
+import { RecuperacionContraseña } from '../../../../Desktop/components/ui/RecuperacionContraseña/RecuperacionContraseña'
 
 export const RecuperacionDeContraseña = () => {
   return (

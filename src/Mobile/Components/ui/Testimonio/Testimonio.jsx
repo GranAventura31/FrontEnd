@@ -1,16 +1,12 @@
 import React from 'react'
 
-export const Testimonio = ({img, content, pcontent,pcontent2, style, stylep,stylep2, styleh1,referencia}) => {
+export const Testimonio = ({img,pcontent2, style,stylep2,referencia}) => {
   return (
-        <div className='CardTestimoniosM'>
-          <div className='CardImagen'>
-            <img src={img} alt="" className={style}/>
-            <div className='CardH1P'>
-              <h1 className={styleh1}>{content}</h1>
-              <a href={referencia} className={stylep} target='_black'><p>{pcontent}</p></a>
-            </div> 
+        <div className='CardTestimoniosMobile'>
+          <div className='CardImagenMobile'>
+            <a href={referencia} target='_black'><img src={img} alt="" className={style} ></img></a>
           </div>
-          <div className='CardInformacionTestimonio'>
+          <div className='CardInformacionTestimonioMobile'>
                 <p className={stylep2}>{pcontent2}</p>
           </div>
         </div>

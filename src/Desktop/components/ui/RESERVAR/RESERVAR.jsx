@@ -1,5 +1,5 @@
 import React from 'react'
-import { Reserva } from '../Reserva/Reserva'
+import { Reserva } from '../../../../Desktop/components/ui/Reserva/Reserva'
 
 
 

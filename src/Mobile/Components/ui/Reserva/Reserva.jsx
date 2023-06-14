@@ -87,24 +87,24 @@ export const Reserva = () => {
   }}
 
   return (
-    <div className="form-box-Reserva">
-            <h1 >¡Reserva aquí!</h1>
+    <div className="form-box-ReservaMobile">
+            <h1 className='ReservaMobile'>¡Reserva aquí!</h1>
             <form action="#" >
-              <div className='input-box'>
+              <div className='input-boxMobile'>
                 <span className='icon'>
                   <MdEmail />
                 </span>
                 <input type="email" name="email" onChange={(e) => {setEmail(e.target.value)}}  required />
                 <label>Correo</label>
               </div>
-              <div className='input-box'>
+              <div className='input-boxMobile'>
                   <span className="icon">
                     <RiLockPasswordFill/>
                   </span>
                   <input type="text" name="name" onChange={(e) => {setName(e.target.value)}}  required/>
                   <label>Nombre Completo</label>
               </div>
-              <div className='input-box'>
+              <div className='input-boxMobile'>
                   <span className="icon">
                     <RiLockPasswordFill/>
                   </span>
@@ -113,23 +113,23 @@ export const Reserva = () => {
               </div>
               <div>
               <FormGroup name='school' onChange={(e)=>{setSchool(e.target.value)}}>
-                <FormGroup>
+                <FormGroup className='formGroupMobile'>
                   <Input type="radio" className='radio1' value='Colegio' onChange={ChangeRadioSchool} checked={chooseSchool == 'Colegio' ? true: false}/>
                   <Label for='radio1'>colegio</Label>
                 </FormGroup>
-                <FormGroup>
+                <FormGroup  className='formGroupMobile'>
                   <Input type="radio" className='radio2' value='No Colegio' onChange={ChangeRadioSchool} checked={chooseSchool == 'No Colegio' ? true: false}/>
                   <Label for='radio2' className='radio2'>No colegio</Label>
                 </FormGroup>
               </FormGroup>
               </div>
-              <button type='submit' className="btnReserva" onClick={openModal}> Reservar </button>
+              <button type='submit' className="btnReservaMobile" onClick={openModal}> Reservar </button>
             </form>
             <Modal
             isOpen={modalIsOpen}
             onRequestClose={closeModal}
             contentLabel="Example Modal" 
-            className="reservaModal">
+            className="reservaModalMobile">
               <AiOutlineArrowLeft className='devolverModal' onClick={closeModal}/>
               <div className='reservaModal1'>
                 <h1 className='h1reservaModal'>¡Gracias por confiar en nosotros!</h1>

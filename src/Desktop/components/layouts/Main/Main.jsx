@@ -1,9 +1,10 @@
 import React from 'react'
-import { Inicio } from '../../ui/Inicio/Inicio'
-import { Personal } from '../../ui/Personal/Personal'
-import { CardsLugares } from '../../ui/CardsLugares/CardsLugares'
-import { Testimonioss } from '../../ui/Testimonioss/Testimonioss'
-import { RESERVAR } from '../../ui/RESERVAR/RESERVAR'
+import { Inicio } from '../../../../Desktop/components/ui/Inicio/Inicio'
+import { Personal } from '../../../../Desktop/components/ui/Personal/Personal'
+import { CardsLugares } from '../../../../Desktop/components/ui/CardsLugares/CardsLugares'
+import { Testimonioss } from '../../../../Desktop/components/ui/Testimonioss/Testimonioss'
+import { RESERVAR } from '../../../../Desktop/components/ui/RESERVAR/RESERVAR'
+
 
 
 export const Main = () => {

@@ -1,6 +1,6 @@
 import React from 'react'
-import { Testimonio } from '../../ui/Testimonio/Testimonio'
-import { Header } from '../Header/Header'
+import { Testimonio } from '../../../../Desktop/components/ui/Testimonio/Testimonio'
+import { Header } from '../../../../Desktop/components/layouts/Header/Header'
 
 export const Testimonios = () => {
   return (

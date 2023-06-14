@@ -7,7 +7,7 @@ export const IconWhat = () => {
   return (
     <div>
         <div>
-        <a href="https://api.whatsapp.com/send?phone=3136724966" className='btn-wsp' target='_black'>
+        <a href="https://api.whatsapp.com/send?phone=3136724966" className='btn-wspMobile' target='_black'>
             <i className='icon-whatsapp'>
                 <ImWhatsapp/>
             </i>

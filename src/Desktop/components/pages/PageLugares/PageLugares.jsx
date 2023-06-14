@@ -1,6 +1,6 @@
 import React from 'react'
-import { Header } from '../../layouts/Header/Header'
-import { Lugares } from '../../ui/Lugares/Lugares'
+import { Header } from '../../../../Desktop/components/layouts/Header/Header'
+import { Lugares } from '../../../../Desktop/components/ui/Lugares/Lugares'
 
 
 export const PageLugares = () => {
