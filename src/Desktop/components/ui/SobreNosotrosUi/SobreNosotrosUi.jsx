@@ -4,7 +4,6 @@ import React from 'react'
 export const SobreNosotrosUi = () => {
   return (
     <div>
-      {/* <p>adasasasasa</p> */}
       <div className='contenidoNosotros'>
         <figure className='imagen'>
           <img src="https://res.cloudinary.com/dlohqvzri/image/upload/v1684447278/Imagen1_aav3dx.jpg" alt="" className='img'/>
@@ -23,7 +22,7 @@ export const SobreNosotrosUi = () => {
           <p>Somos una cadena hotelera 100% colombiana con 20 años de trayectoria en el sector turístico, nuestro objetivo es brindar vacaciones con propósito, ofreciendo a los colombianos la posibilidad de viajar y vivir experiencias para conocer los puntos turísticos más representativos en el país y Latinoamérica a precios cómodos, e impactando positivamente en la economía nacional, teniendo como principio una operación amigable con el medioambiente y el empoderamiento de las comunidades donde estamos presentes.</p>
         </div>
       </div>
-      <div className='contenidoNosotros'>
+      <div className='contenidoNosotros3'>
         <figure className='imagen'>
           <img src="https://res.cloudinary.com/dlohqvzri/image/upload/v1685651882/excursion_dmcclq.jpg" alt="" className='img'/>
          </figure>
