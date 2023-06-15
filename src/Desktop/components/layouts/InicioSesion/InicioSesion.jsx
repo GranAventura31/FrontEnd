@@ -56,7 +56,6 @@ const register = (e) => {
       })
   }
 
-
   e.preventDefault();
   if (nombre === '' || correo === '' || contrasena === '' || telefono === '') {
     alertaCampos();
@@ -86,15 +85,27 @@ const login = (e) => {
     })
   }
 
+const errorLogin = () => {
+      swal.fire({
+        icon: 'error',
+        text: 'Correo o contraseña incorrecta',
+        confirmButtonText: 'OK',
+        // timer: '1300'
+      })
+  }
+
+console.log(correo);
+console.log(contrasena);
   if (correo === '' || contrasena === '') {
     alertaCampos();
   }else{
     e.preventDefault()
-    Axios.get("http://localhost:5000/api/Login",{
-      correo: correo,
-      contrasena: contrasena
+    Axios.post("http://localhost:5000/api/Login",{
+      Correo: correo,
+      Contrasena: contrasena
     }).then((response)=>{
       if (response.data.message) {
+        errorLogin();
         setLoginStatus(response.data.message);
       }else{
         alertaLogin();
@@ -128,7 +139,7 @@ const login = (e) => {
               <div className="remember-forgot">
                   <Link className='recuperacionContraseña' to='/RecuperacionContraseña'><a> ¿Has olvidado tu contraseña? </a></Link>
               </div>  
-              <button type='submit' className="btn" onClick={login}> Inicio Sesion </button>
+              <button type='' className="btn" onClick={login}> Inicio Sesion </button>
             </form>
               <div className="login-register">
                 <p> ¿No tienes una cuenta? <button  className="register-link" onClick={panel}>Registrate aquí</button></p>

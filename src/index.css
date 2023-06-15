@@ -214,15 +214,29 @@ main{
   /* height: 70rem; */
 }
 .DivCardTestimonios{
+  width: 90%;
+  height: 20rem;
+  margin-left: 5rem;
+  border-radius: 10px;
   display: flex;
-  flex-wrap: wrap;
-  padding: 5rem;
-  justify-content: space-around;
+  /* padding: 2rem; */
+  border: 1px solid #000000;
+  overflow-x: auto;
+  /* flex-wrap: wrap; */
+  /* padding: 5rem;
+  justify-content: space-around; */
 }
-.CardTestimonios{
+.DivCardTestimonios .CardTestimonios{
   width: 25rem;
   height: 15rem;
-  margin-bottom: 6rem;
+  /* line-height: 10rem; */
+  text-align: center;
+  background-color: #000000;
+}
+.CardTestimonios {
+  /* width: 25rem;
+  height: 15rem;
+  margin-bottom: 6rem; */
 }
 
 .CardImagen{
@@ -259,6 +273,11 @@ main{
   height: 60%;
   padding: 1rem;
   border-radius:  0 0 2rem 2rem;
+}
+
+.btnComentar{
+  width: 10rem;
+  height: 5rem;
 }
 
 /* Cards testimony Page */
