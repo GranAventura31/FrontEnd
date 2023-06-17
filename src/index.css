@@ -10,18 +10,28 @@ body{
 
 header{
   width: 100%;
-  height: 6rem;
+  /* height: 6rem; */
   display: flex;
-  background: rgb(255, 255, 255);
+  flex-direction: row;
+  /* background: rgb(255, 255, 255); */
   justify-content: space-between;
 }
 
+.niko{
+  display: flex;
+  margin-right: 2rem;
+}
+.pPerfil{
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
 .navbar{
-  padding: 2rem 0 0 0;
+  /* padding: 2rem 0 0 0; */
 }
 
 .navbarLogueado{
-  padding: 0 0 2rem 0;
+  /* padding: 0 0 2rem 0; */
 }
 
 .barraT{
@@ -219,18 +229,13 @@ main{
   margin-left: 5rem;
   border-radius: 10px;
   display: flex;
-  /* padding: 2rem; */
   border: 1px solid #000000;
   overflow-x: auto;
-  /* flex-wrap: wrap; */
-  /* padding: 5rem;
-  justify-content: space-around; */
 }
 .DivCardTestimonios .CardTestimonios{
   width: 25rem;
   height: 15rem;
-  /* line-height: 10rem; */
-  text-align: center;
+  /* text-align: center; */
   background-color: #000000;
 }
 .CardTestimonios {

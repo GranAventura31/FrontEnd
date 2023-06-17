@@ -5,7 +5,7 @@ import { MenuHamburguesa } from '../../../../Desktop/components/ui/MenuHamburgue
 export const Navbar = () => {
   return (
     <nav className='navbar'>
-        <div>
+        <div className='navbar-'>
         <Link className='link' to='/'>Página de inicio</Link>
         <Link className='link' to='/contenido'>Contenido</Link>
         <Link className='link' to='/SobreNosotros'>Sobre Nosotros</Link>

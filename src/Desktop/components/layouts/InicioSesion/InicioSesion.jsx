@@ -5,8 +5,7 @@ import { FaUserCircle } from 'react-icons/fa';
 import { BsTelephoneXFill } from 'react-icons/bs';
 import Axios from 'axios';
 import swal from 'sweetalert2';
-import { Link }  from 'react-router-dom'
-import { Routes, Route} from 'react-router-dom'
+import { json, Link }  from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 
 
@@ -38,82 +37,69 @@ export const InicioSesion = ({user, setUser}) => {
     })
   }
 const register = (e) => {
-
-  const alertaRegistro = () => {
-      swal.fire({
-        icon: 'success',
-        text: 'Registro exitoso',
-        confirmButtonText: 'Cool',
-        timer: '1300'
-      })
-  }
-  const correoRepetido = () => {
-      swal.fire({
-        icon: 'error',
-        text: 'Correo ya existe',
-        confirmButtonText: 'OK',
-        // timer: '1300'
-      })
-  }
-
   e.preventDefault();
   if (nombre === '' || correo === '' || contrasena === '' || telefono === '') {
     alertaCampos();
-  }else{
+  } else {
     Axios.post("http://localhost:5000/api/Register", {
-      nombre:  nombre,
+      nombre: nombre,
       correo: correo,
       contrasena: contrasena,
       telefono: telefono
     }).then((response) => {
-      if (response.data.message) {
-        setRegistroStatus(response.data.message);
-      }else{
-        alertaRegistro();
-        putPanel();
+      if (response.status === 200) {
+        swal.fire({
+          icon: 'success',
+          title: 'Éxito',
+          text: 'Usuario registrado exitosamente'
+        });
       }
-    })
+    }).catch((error) => {
+      swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'Correo o telefono ya registrados.'
+      });
+      console.log(error);
+    });
   }
-}
- const navigate = useNavigate();
-const login = (e) => {
-  const alertaLogin = () =>{
-    swal.fire({
-      icon: 'success',
-      text: 'Inicio sesion exitosamente',
-      confirmButtonText: 'OK',
-    })
-  }
+};
 
+const navigate = useNavigate();
 const errorLogin = () => {
       swal.fire({
         icon: 'error',
         text: 'Correo o contraseña incorrecta',
         confirmButtonText: 'OK',
-        // timer: '1300'
       })
   }
+const login = (e) => {
+  console.log(correo);
+  console.log(contrasena);
 
-console.log(correo);
-console.log(contrasena);
   if (correo === '' || contrasena === '') {
     alertaCampos();
-  }else{
-    e.preventDefault()
-    Axios.post("http://localhost:5000/api/Login",{
+  } else {
+    e.preventDefault();
+    Axios.post("http://localhost:5000/api/Login", {
       Correo: correo,
       Contrasena: contrasena
-    }).then((response)=>{
-      if (response.data.message) {
-        errorLogin();
-        setLoginStatus(response.data.message);
-      }else{
-        alertaLogin();
-        navigate('/HomeLogueado');
+    }).then((response) => {
+      if (response.status === 200) {
+        localStorage.setItem('datosUsuario', JSON.stringify(response.data));
+        
+        swal.fire('Éxito', 'Inicio de sesión exitoso', 'success')
+          .then(() => {
+            navigate('/HomeLogueado');
+          });
       }
-    })
+    }).catch((error) => {
+      console.error(error);
+      errorLogin();
+    });
   }
 }
+
   return (
     <Fragment>
       <div className='contenedor'>

@@ -28,7 +28,7 @@ export const Desktop = () => {
     const getUsers = () =>{
       fetch('http://localhost:5000/api')
       .then(res => res.json())
-      .then(res => console.log(res))  
+      // .then(res => console.log(res))  
     }
     getUsers()
   }, [])
