@@ -19,7 +19,7 @@ export const Lugar = () => {
         <p className='parrafociudadD'>Cartagena es una ciudad portuaria en la costa caribeña de Colombia. Junto al mar, se encuentra la Ciudad Vieja amurallada, que se fundó en el siglo XVI, con plazas, calles de adoquines y edificios coloniales coloridos. Con un clima tropical, la ciudad también es un destino popular por sus playas. Se puede llegar en bote a la Isla de Barú, con playas de arena blanca y palmeras, y a las Islas del Rosario, famosas por sus arrecifes de coral.</p>
         </section>
         <section>
-        <img className='imagenciudadD' src="https://f.hubspotusercontent00.net/hubfs/5696451/Torre%20del%20Reloj%20en%20Cartagena%20de%20Indias,%20Colombia.jpg" alt="" />
+        <img className='imagenciudadD' src="https://http2.mlstatic.com/D_NQ_NP_688002-MCO46152356538_052021-O.jpg" alt="" />
         </section>
       </div>
       <div className='ciudadIzquierdaI'>

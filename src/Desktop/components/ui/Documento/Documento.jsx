@@ -4,7 +4,7 @@ import { Documentos } from '../../../../Desktop/components/ui/Documentos/Documen
 export const Documento = () => {
   return (
     <div className='documento'>
-      <h1 className='titulodocumentos'>DOCUMENTOS</h1>
+      <h1 className='titulodocumentos'>Descarga aquí tus Documentos</h1>
       <hr className='hrDocumento'/>
       <Documentos/>
     </div>

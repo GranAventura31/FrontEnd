@@ -4,7 +4,7 @@ import { Documentos } from '../../../../Desktop/componentsLogueado/ui/Documentos
 export const Documento = () => {
   return (
     <div className='documento'>
-      <h1 className='titulodocumentos'>DOCUMENTOS</h1>
+      <h1 className='titulodocumentos'>¡Descarga tus documentos!</h1>
       <hr className='hrDocumento'/>
       <Documentos/>
     </div>

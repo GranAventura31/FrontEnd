@@ -36,10 +36,20 @@ export const InicioSesion = ({user, setUser}) => {
       timer: '1300'
     })
   }
+  const alertaContraseña = () =>{
+    swal.fire({
+      icon: 'error',
+      text: 'la contraseña tiene que ser mas de 8 caracteres',
+      confirmButtonText: 'OK',
+      timer: '1300'
+    })
+  }
 const register = (e) => {
   e.preventDefault();
   if (nombre === '' || correo === '' || contrasena === '' || telefono === '') {
     alertaCampos();
+  }else if ( contrasena.length < 8) {
+    alertaContraseña();
   } else {
     Axios.post("http://localhost:5000/api/Register", {
       nombre: nombre,
@@ -154,7 +164,7 @@ const login = (e) => {
                 <span className='icon'>
                 <RiLockPasswordFill/>
                 </span>
-                <input type="password" name='contrasena' onChange={(e) => {setContrasena(e.target.value)}} required/>
+                <input  type="password" name='contrasena' onChange={(e) => {setContrasena(e.target.value)}} required/>
                 <label>Contraseña</label>
               </div>
               <div className='input-box'>

@@ -3,7 +3,7 @@ import React from 'react'
 
 export const TarjetasKits = () => {
   return (
-    <div className='DivProductos'>
+    <div className='DivProductosK'>
         <div className='producto'>
             <section className='imgProducto'>
                 <img className='imagenpersona' src="https://res.cloudinary.com/dlohqvzri/image/upload/v1682022987/niko/pintucaritas_camabx.webp" alt="" />

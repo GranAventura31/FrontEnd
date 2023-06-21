@@ -19,6 +19,7 @@ import { HomeLogueado } from '../Desktop/componentsLogueado/pages/HomeLogueado/H
 import { SobreNosotrosPageLogueado } from '../Desktop/componentsLogueado/pages/SobreNosotrosPageLogueado/SobreNosotrosPageLogueado';
 import { PageLugaresLogueado } from '../Desktop/componentsLogueado/pages/PageLugaresLogueado/PageLugaresLogueado';
 import { ContenidoLogueado } from '../Desktop/componentsLogueado/pages/ContenidoLogueado/ContenidoLogueado'
+import { Perfil } from '../../src/Desktop/componentsLogueado/ui/Perfil/Perfil'
 
 
 export const Desktop = () => {
@@ -28,7 +29,7 @@ export const Desktop = () => {
     const getUsers = () =>{
       fetch('http://localhost:5000/api')
       .then(res => res.json())
-      // .then(res => console.log(res))  
+      .then(res => console.log(res))  
     }
     getUsers()
   }, [])
@@ -60,6 +61,7 @@ export const Desktop = () => {
       <Route path='/ContenidoLogueado' element={<ContenidoLogueado/>}/>
       <Route path='/SobreNosotrosLogueado' element={<SobreNosotrosPageLogueado/>}/>
       <Route path='/Lugares' element={<PageLugaresLogueado/>}/>
+      <Route path='/Perfil' element={<Perfil/>}/>
     </Routes>
     </div>
   </div>
