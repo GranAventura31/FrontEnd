@@ -5,6 +5,7 @@ import { CardsLugares } from '../../../../Desktop/componentsLogueado/ui/CardsLug
 import { RESERVAR } from '../../../../Desktop/componentsLogueado/ui/RESERVAR/RESERVAR'
 import {Comments} from '../../../../Desktop/componentsLogueado/ui/comments/Comments'
 import {Contador} from '../../../../Desktop/componentsLogueado/ui/Contador/Contador'
+// import { Reserva } from '../../../../Desktop/componentsLogueado/ui/Reserva/Reserva'
 
 
 export const Main = () => {
@@ -13,6 +14,7 @@ export const Main = () => {
         {/* <Inicio /> */}
         <Contador/>
         <RESERVAR/>
+        {/* <Reserva/> */}
         <CardsLugares/>
         <Comments/>
         <Personal/>

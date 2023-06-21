@@ -287,7 +287,14 @@ overflow:hidden;
     margin-top: 1rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
-/* Modal paquete 2 */
+/* Reservar paquete*/
+.h1ReservarPaquete{
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 2rem;
+}
 
 
 
@@ -479,11 +486,35 @@ overflow:hidden;
   color: #ffffff;
   cursor: pointer;
 }
+.BotonReservar{
+  display: flex;
+  justify-content: center;
+  width: 26rem;
+  height: 3rem;
+  margin-left: 46rem;
+  font-family: Arial;
+  font-weight: 200;
+  border-radius: 10px;
+  margin-top: 2rem;
+  background: #ff0800;
+  color: #ffffff;
+  cursor: pointer;
+  text-decoration: none;
+}
+.BotonReservar:hover{
+  background: #b81d1d;
+}
+.LinkBotonRervar{
+  font-size: 1.5rem;
+  margin-top: 7px;
+  text-decoration: none;
+  color: #fff ;
+}
 .Botonver{
   width: 7rem;
   height: 3rem;
   border-radius: 10px ;
-  margin-left: 2rem;
+  margin-left: 6rem;
   margin-top: 2rem;
   background: #000000;
   color: #ffffff;
@@ -878,6 +909,12 @@ button[type="submit"]:hover{
 }
 
 /* Comentarios */
+.DatosCommet{
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-right: 1rem;
+}
 .comments-container {
   display: flex;
   flex-wrap: wrap;
@@ -1759,7 +1796,7 @@ input[type=number]::-webkit-outer-spin-button {
   }
 }
 /* RESERVAR EXCURSION */
- /* .form-box-Reserva{
+ .form-box-Reserva{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1770,17 +1807,6 @@ input[type=number]::-webkit-outer-spin-button {
   border-radius: 2rem;
   border:solid #000000;
   background: rgb(255, 255, 255);
-}
-.tituloReserva{
-  display: flex;
-  justify-content: center;
-  padding-top: 4rem;
-  font-size: 3rem;
-}
-.HrReserva{
-  width: 15rem;
-  height: 0.2rem;
-  background-color: #1cd48d;
 }
 .btnReserva{
   width: 20rem;
@@ -1795,14 +1821,14 @@ input[type=number]::-webkit-outer-spin-button {
   font-weight: bold;
   margin-bottom: 2rem;
 }
-.btnReserva:hover{
+/* .btnReserva:hover{
   background: #149463;
-}
-  */
+} */
+ 
 
 
 /* Reserva de todo el paquete Modal*/
- /* .Reserva1{
+ /* .Reserva1P{
   width: 90%;
   background: rgb(228, 228, 228);
 }  */
@@ -2593,7 +2619,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .input-boxP{
   width: 100%;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   border-radius: 15px;
   margin: 10px;
 }

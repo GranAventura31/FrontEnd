@@ -87,7 +87,7 @@ export const Comments = () => {
                     <img src={comment.Image} alt="Foto" className="comment-image" />
                   )}
                   <div className="comment-content">
-                    <strong>Nombre:</strong> {comment.Nombre}
+                    <strong >Nombre:</strong> {comment.Nombre}
                     <br />
                     <strong>Comentario:</strong> {comment.Comentario}
                   </div>
@@ -102,7 +102,7 @@ export const Comments = () => {
     </div>
     <div className="form-container"> 
       <form onSubmit={enviarComentario}>
-        <label>
+        <label className='DatosCommet'>
           Nombre:
           <input
             type="text"
@@ -111,7 +111,7 @@ export const Comments = () => {
             onChange={(e) => setNombre(e.target.value)}
           />
         </label>
-        <label>
+        <label className='DatosCommet'>
           Comentario:
           <input
             type="text"

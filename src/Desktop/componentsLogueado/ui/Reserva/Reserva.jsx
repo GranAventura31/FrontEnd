@@ -114,12 +114,16 @@ export const Reserva = () => {
               <div>
               <FormGroup name='school' onChange={(e)=>{setSchool(e.target.value)}}>
                 <FormGroup>
-                  <Input type="radio" className='radio1' value='Colegio' onChange={ChangeRadioSchool} checked={chooseSchool == 'Colegio' ? true: false}/>
-                  <Label for='radio1'>colegio</Label>
+                  <Input type="radio" className='radio1' value='Paquete1' onChange={ChangeRadioSchool} checked={chooseSchool == 'Colegio' ? true: false}/>
+                  <Label for='radio1'>Paquete Playa</Label>
                 </FormGroup>
                 <FormGroup>
-                  <Input type="radio" className='radio2' value='No Colegio' onChange={ChangeRadioSchool} checked={chooseSchool == 'No Colegio' ? true: false}/>
-                  <Label for='radio2' className='radio2'>No colegio</Label>
+                  <Input type="radio" className='radio2' value='Paquete2' onChange={ChangeRadioSchool} checked={chooseSchool == 'No Colegio' ? true: false}/>
+                  <Label for='radio2' className='radio2'>Paquete Fiesta</Label>
+                </FormGroup>
+                <FormGroup>
+                  <Input type="radio" className='radio3' value='Paquete3' onChange={ChangeRadioSchool} checked={chooseSchool == 'No Colegio' ? true: false}/>
+                  <Label for='radio3' className='radio3'>Paquete Familia</Label>
                 </FormGroup>
               </FormGroup>
               </div>

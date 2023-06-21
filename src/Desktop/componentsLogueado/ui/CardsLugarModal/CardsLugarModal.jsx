@@ -3,6 +3,7 @@ import React,{useState} from 'react'
 import Modal from 'react-modal'
 import {CardsLugarModal2} from '../../../../Desktop/componentsLogueado/ui/CardsLugarModal2/CardLugarModal2'
 import {CardsLugarModal3}from '../../../../Desktop/componentsLogueado/ui/CardsLugarModal3/CardsLugarModal3'
+
 import swal from 'sweetalert2';
 
 
@@ -34,7 +35,6 @@ export const CardsLugarModal = ({img,content, styleH2,BtnModalver,paquetever,pre
         <h2 className={styleH2}>{contentH2}</h2>
         <h3 className={precio}>{valorpaquete}</h3>
       </div>
-        <button className={BtnModalPaquete}  >{paquete}</button> 
         <button className={BtnModalver} onClick={openModal1} >{paquetever}</button>     
 
         <Modal isOpen={modalIsOpen1}

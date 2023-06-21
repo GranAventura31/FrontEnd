@@ -24,7 +24,6 @@ export const CardsLugarModal3 = ({img,content, styleH2,BtnModalver,paquetever,pr
         <h2 className={styleH2}>{contentH2}</h2>
         <h3 className={precio}>{valorpaquete}</h3>
       </div>
-        <button className={BtnModalPaquete} >{paquete}</button> 
         <button className={BtnModalver} onClick={openModal3} >{paquetever}</button>     
 
         <Modal isOpen={modalIsOpen3}
