@@ -10,7 +10,7 @@ export const Kit = () => {
         <div className='kit'>
           <h1 className='nombrekit'>Kit especial de Gran Aventura</h1>
           <p className='desckit'>¡Este es el kit que brinda Gran Aventura para nuestros excursionistas!</p>
-          <p className='preciokit'>$500.000</p>
+          {/* <p className='preciokit'>$500.000</p> */}
         </div>
     </div>
   )

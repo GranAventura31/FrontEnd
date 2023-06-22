@@ -1,8 +1,46 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { BsCart4 } from 'react-icons/bs';
+import Modal from 'react-modal'
+import { Link }  from 'react-router-dom'
+import swal from 'sweetalert2'
+import { useNavigate } from 'react-router-dom';
+import {AiOutlineArrowLeft} from 'react-icons/ai'
 
 export const CarritoCompras = () => {
     const [cartItems, setCartItems] = useState([]);
     const [totalPrice, setTotalPrice] = useState([0]);
+    const navigate = useNavigate();
+    const clickComprar = () =>{
+      if (totalPrice === 0) {
+        swal.fire({
+          icon: 'error',
+          text: 'No hay productos en el carrito',
+          confirmButtonText: 'Cool'
+        });
+      }else{
+        navigate('/kit');
+      }
+    }
+    useEffect(() => {
+      const storedCartItems = JSON.parse(localStorage.getItem('cartItems'));
+      if (storedCartItems) {
+        setCartItems(storedCartItems);
+      }
+    }, []);
+  
+    // Actualizar el almacenamiento local cuando los elementos del carrito cambien
+    useEffect(() => {
+      localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    }, [cartItems]);
+  
+    // Calcular y guardar el precio total en el almacenamiento local cuando los elementos del carrito cambien
+    useEffect(() => {
+      const total = cartItems.reduce((acc, item) => {
+        return acc + item.price * item.quantity;
+      }, 0);
+      setTotalPrice(total);
+      localStorage.setItem('totalPrice', JSON.stringify(total));
+    }, [cartItems]);
 
   const addToCart = (item) => {
       const updateCart=([...cartItems, { ...item, quantity: 1 }]);
@@ -52,9 +90,32 @@ export const CarritoCompras = () => {
     setCartItems([]);
   };
 
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+  // const Navigate = useNavigate()
+  const clickVolver = () =>{
+    navigate('/HomeLogueado')
+  }
+
   return (
     <div className="container">
 
+      <BsCart4 className="iconCarrito" onClick={openModal}/>
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        contentLabel="Example Modal"
+        className="modalCompra"
+      >
+        <AiOutlineArrowLeft className='devolverHome' onClick={closeModal}/>
       <ul className="cartList">
         {cartItems.map((item, index) => (
           <li key={index} className="cartItem">
@@ -94,12 +155,11 @@ export const CarritoCompras = () => {
         Total: ${cartItems.reduce((total, item) => total + item.price * item.quantity, 0)}
       </div>
         
-       {/* <div className="totalPrice">Total: ${totalPrice.toFixed(2)}</div> */}
-
-      <button className="buyButton" onClick={handleBuy}>Comprar </button>
+      <button className="buyButton" onClick={clickComprar}>Comprar</button>
       <button className="clearButton" onClick={emptyCart}>
         Vaciar carrito
       </button>
+      </Modal>
 
       <div className="DivProductos">
       <div className="producto">
@@ -206,8 +266,146 @@ export const CarritoCompras = () => {
             </button>
           </section>
         </div>
-
       </div>
     </div>
   );
 };
+
+// import React, { useState, useEffect } from "react";
+// import { BsCart4 } from 'react-icons/bs';
+// import Modal from 'react-modal';
+// import { Link } from 'react-router-dom';
+// import swal from 'sweetalert2';
+// import { useNavigate } from 'react-router-dom';
+// import { AiOutlineArrowLeft } from 'react-icons/ai';
+
+// export const CarritoCompras = () => {
+//   const [cartItems, setCartItems] = useState([]);
+//   const [totalPrice, setTotalPrice] = useState(0);
+//   const navigate = useNavigate();
+//   const [modalIsOpen, setIsOpen] = useState(false);
+
+//   useEffect(() => {
+//     const storedCartItems = JSON.parse(localStorage.getItem('cartItems'));
+//     if (storedCartItems) {
+//       setCartItems(storedCartItems);
+//     }
+//   }, []);
+
+//   // Actualizar el almacenamiento local cuando los elementos del carrito cambien
+//   useEffect(() => {
+//     localStorage.setItem('cartItems', JSON.stringify(cartItems));
+//   }, [cartItems]);
+
+//   // Calcular y guardar el precio total en el almacenamiento local cuando los elementos del carrito cambien
+//   useEffect(() => {
+//     const total = cartItems.reduce((acc, item) => {
+//       return acc + item.price * item.quantity;
+//     }, 0);
+//     setTotalPrice(total);
+//     localStorage.setItem('totalPrice', JSON.stringify(total));
+//   }, [cartItems]);
+
+//   const addToCart = (item) => {
+//     const existingItem = cartItems.find((cartItem) => cartItem.name === item.name);
+//     if (existingItem) {
+//       const updatedCart = cartItems.map((cartItem) => {
+//         if (cartItem.name === item.name) {
+//           return { ...cartItem, quantity: cartItem.quantity + 1 };
+//         }
+//         return cartItem;
+//       });
+//       setCartItems(updatedCart);
+//     } else {
+//       const updatedCart = [...cartItems, { ...item, quantity: 1 }];
+//       setCartItems(updatedCart);
+//     }
+//   };
+
+//   const removeFromCart = (item) => {
+//     const updatedCart = cartItems.filter((cartItem) => cartItem !== item);
+//     setCartItems(updatedCart);
+//   };
+
+//   const increaseQuantity = (item) => {
+//     const updatedCart = cartItems.map((cartItem) => {
+//       if (cartItem === item) {
+//         return { ...cartItem, quantity: cartItem.quantity + 1 };
+//       }
+//       return cartItem;
+//     });
+//     setCartItems(updatedCart);
+//   };
+
+//   const decreaseQuantity = (item) => {
+//     const updatedCart = cartItems.map((cartItem) => {
+//       if (cartItem === item && cartItem.quantity > 1) {
+//         return { ...cartItem, quantity: cartItem.quantity - 1 };
+//       }
+//       return cartItem;
+//     });
+//     setCartItems(updatedCart);
+//   };
+
+//   const clickComprar = () => {
+//     if (totalPrice === 0) {
+//       swal.fire({
+//         icon: 'error',
+//         text: 'No hay productos en el carrito',
+//         confirmButtonText: 'Cool'
+//       });
+//     } else {
+//       navigate('/kit');
+//     }
+//   };
+
+//   const emptyCart = () => {
+//     setCartItems([]);
+//   };
+
+//   const handleBuy = () => {
+//     alert(`Total de la compra: $${totalPrice.toFixed(2)}`);
+//   };
+
+//   const clickVolver = () => {
+//     navigate('/HomeLogueado');
+//   };
+
+//   const openModal = () => {
+//     setIsOpen(true);
+//   };
+
+//   const closeModal = () => {
+//     setIsOpen(false);
+//   };
+
+//   return (
+//     <div>
+//       <h2>Carrito de compras</h2>
+//       <button onClick={clickVolver}>
+//         <AiOutlineArrowLeft /> Volver al inicio
+//       </button>
+//       <br />
+//       <br />
+//       <div className="cart-items">
+//         {cartItems.map((item, index) => (
+//           <div key={index}>
+//             <h3>{item.name}</h3>
+//             <p>Precio: ${item.price.toFixed(2)}</p>
+//             <p>Cantidad: {item.quantity}</p>
+//             <button onClick={() => increaseQuantity(item)}>+</button>
+//             <button onClick={() => decreaseQuantity(item)}>-</button>
+//             <button onClick={() => removeFromCart(item)}>Eliminar</button>
+//           </div>
+//         ))}
+//       </div>
+//       {cartItems.length > 0 && (
+//         <div>
+//           <p>Total: ${totalPrice.toFixed(2)}</p>
+//           <button onClick={handleBuy}>Comprar</button>
+//           <button onClick={emptyCart}>Vaciar carrito</button>
+//         </div>
+//       )}
+//     </div>
+//   );
+// };

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Swal from 'sweetalert2'
+import { Link }  from 'react-router-dom'
+import { BsPersonFill } from 'react-icons/bs'
 
 export const Comments = () => {
 // AGREGAR COMENTARIO
@@ -83,16 +85,18 @@ export const Comments = () => {
             <ul className="comment-card-list">
               {comments.map((comment) => (
                 <li key={comment.id} className="comment-card">
-                  {comment.Image && (
-                    <img src={comment.Image} alt="Foto" className="comment-image" />
-                  )}
+                  <Link to='/Perfil'><BsPersonFill color='white' className='fotocomentario'/></Link>
                   <div className="comment-content">
-                    <strong >Nombre:</strong> {comment.Nombre}
+                  <div className='insta-comentario'>
+                     <p className=''>{comment.Nombre}</p> 
+                    </div>
                     <br />
-                    <strong>Comentario:</strong> {comment.Comentario}
+                    <strong></strong> <p className='text-comentario'> {comment.Comentario} </p>
                   </div>
                 </li>
+                
               ))}
+              
             </ul>
           ) : (
             <p className='noComentarios'>No hay comentarios.</p>

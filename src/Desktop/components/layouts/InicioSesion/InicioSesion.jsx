@@ -24,6 +24,7 @@ export const InicioSesion = ({user, setUser}) => {
   const [nombre, setNombre] = useState("");
   const [correo, setCorreo] = useState("");
   const [contrasena, setContrasena] = useState("");
+  const [confirmarContrasena, setConfirmarContrasena] = useState("");
   const [telefono, setTelefono] = useState("");
   const [loginStatus, setLoginStatus] = useState("");
   const [registroStatus, setRegistroStatus] = useState("");
@@ -41,20 +42,30 @@ export const InicioSesion = ({user, setUser}) => {
       icon: 'error',
       text: 'la contraseña tiene que ser mas de 8 caracteres',
       confirmButtonText: 'OK',
-      timer: '1300'
+      timer: '1500'
+    })
+  }
+  const alertaConfirmarContraseña = () =>{
+    swal.fire({
+      icon: 'error',
+      text: 'las contreaseñas no son iguales',
+      confirmButtonText: 'OK',
+      timer: '1500'
     })
   }
 const register = (e) => {
   e.preventDefault();
-  if (nombre === '' || correo === '' || contrasena === '' || telefono === '') {
+  if (nombre === '' || correo === '' || contrasena === '' || confirmarContrasena === '' || telefono === '') {
     alertaCampos();
   }else if ( contrasena.length < 8) {
     alertaContraseña();
+  }else if(confirmarContrasena !== contrasena){
+    alertaConfirmarContraseña();
   } else {
     Axios.post("http://localhost:5000/api/Register", {
       nombre: nombre,
       correo: correo,
-      contrasena: contrasena,
+      contrasena: confirmarContrasena,
       telefono: telefono
     }).then((response) => {
       if (response.status === 200) {
@@ -63,6 +74,7 @@ const register = (e) => {
           title: 'Éxito',
           text: 'Usuario registrado exitosamente'
         });
+        putPanel();
       }
     }).catch((error) => {
       swal.fire({
@@ -169,14 +181,18 @@ const login = (e) => {
               </div>
               <div className='input-box'>
                 <span className='icon'>
+                <RiLockPasswordFill/>
+                </span>
+                <input  type="password" name='contrasena' onChange={(e) => {setConfirmarContrasena(e.target.value)}} required/>
+                <label>Confirmar Contraseña</label>
+              </div>
+              <div className='input-box'>
+                <span className='icon'>
                 <BsTelephoneXFill/>
                 </span>
                 <input type="number" name='telefono' onChange={(e) => {setTelefono(e.target.value)}} required/>
                 <label>Telefono</label>
               </div>
-              {/* <div className="remember-forgot">
-                  <label><input type="checkbox" />Términos y condiciones</label>
-              </div>   */}
               <button type='submit' className="btn" onClick={register}> Registrar </button>
               
             </form>

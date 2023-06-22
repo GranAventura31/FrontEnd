@@ -20,8 +20,11 @@ import { SobreNosotrosPageLogueado } from '../Desktop/componentsLogueado/pages/S
 import { PageLugaresLogueado } from '../Desktop/componentsLogueado/pages/PageLugaresLogueado/PageLugaresLogueado';
 import { ContenidoLogueado } from '../Desktop/componentsLogueado/pages/ContenidoLogueado/ContenidoLogueado'
 import { Perfil } from '../../src/Desktop/componentsLogueado/ui/Perfil/Perfil'
-// import { ReservarPaquete } from '../../Desktop/componentsLogueado/ui/ReservarPaquete/ReservarPaquete'
-import { Reservarpaquete } from '../../src/Desktop/componentsLogueado/ui/ReservarPaquete/ReservarPaquete';
+import { Kit } from '../../src/Desktop/componentsLogueado/ui/kit/kit'
+import { PaqueteFamiliar } from '../../src/Desktop/componentsLogueado/ui/PaqueteFamiliar/PaqueteFamiliar'
+import { PaqueteFiesta } from '../../src/Desktop/componentsLogueado/ui/PaqueteFiesta/PaqueteFiesta'
+import { PaquetePlaya } from '../../src/Desktop/componentsLogueado/ui/PaquetePlaya/PaquetePlaya'
+
 
 export const Desktop = () => {
     const [users, setUsers] = useState([]); 
@@ -63,7 +66,10 @@ export const Desktop = () => {
       <Route path='/SobreNosotrosLogueado' element={<SobreNosotrosPageLogueado/>}/>
       <Route path='/Lugares' element={<PageLugaresLogueado/>}/>
       <Route path='/Perfil' element={<Perfil/>}/>
-      <Route path='/Reserva' element={<Reservarpaquete/>}/>
+      <Route path='/Kit' element={<Kit/>}/>
+      <Route path='/PaqueteFamiliar' element={<PaqueteFamiliar/>}/>
+      <Route path='/PaqueteFiesta' element={<PaqueteFiesta/>}/>
+      <Route path='/PaquetePlaya' element={<PaquetePlaya/>}/>
     </Routes>
     </div>
   </div>

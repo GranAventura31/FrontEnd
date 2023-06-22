@@ -7,6 +7,7 @@ import { RESERVAR } from '../../../../Desktop/components/ui/RESERVAR/RESERVAR'
 import { Contador } from '../../../../Desktop/components/ui/Contador/Contador'
 import { Comments } from '../../../../Desktop/components/ui/comments/Comments'
 import { Kits } from '../../../../Desktop/components/ui/Kits/Kits'
+import { Reserva } from '../../../../Desktop/components/ui/Reserva/Reserva'
 
 
 
@@ -15,6 +16,7 @@ export const Main = () => {
     <main>
         <Contador/>
         <RESERVAR/>
+        {/* <Reserva/> */}
         <CardsLugares/>
         <Promocion/>
         <Kits/>

@@ -3,9 +3,7 @@ import React,{useState} from 'react'
 import Modal from 'react-modal'
 import { CardsLugarModal } from '../../../../Desktop/componentsLogueado/ui/CardsLugarModal/CardsLugarModal'
 import { CardsLugarModal2 } from '../../../../Desktop/componentsLogueado/ui/CardsLugarModal2/CardLugarModal2';
-
-
-
+import { useNavigate } from 'react-router-dom';
 
 export const CardsLugarModal3 = ({img,content, styleH2,BtnModalver,paquetever,precio,valorpaquete, styleImagen,paquete,BtnModalPaquete,contentH2}) => {  
   const [modalIsOpen3, setIsOpen3] = React.useState(false);
@@ -17,6 +15,11 @@ export const CardsLugarModal3 = ({img,content, styleH2,BtnModalver,paquetever,pr
   function closeModal3() {
     setIsOpen3(false);
   }
+
+  const navigate = useNavigate()
+  const clickFamilia = () => {
+    navigate('/PaqueteFamiliar')
+  }
     return (
     <div className='CardsLugarModal'>
       <img src={img} alt="Cartagena" className={styleImagen}/>
@@ -24,6 +27,7 @@ export const CardsLugarModal3 = ({img,content, styleH2,BtnModalver,paquetever,pr
         <h2 className={styleH2}>{contentH2}</h2>
         <h3 className={precio}>{valorpaquete}</h3>
       </div>
+        <button className={BtnModalPaquete} onClick={clickFamilia}>{paquete}</button> 
         <button className={BtnModalver} onClick={openModal3} >{paquetever}</button>     
 
         <Modal isOpen={modalIsOpen3}
